@@ -1,0 +1,54 @@
+#include <iostream>
+using namespace::std;
+double input(string text)
+
+
+{
+    double nilai;
+
+    cout<<"Nilai "<<text<<":";cin>>nilai;
+    return nilai;
+
+}
+  float nilaiakhir;
+void grade(double nilai)
+{
+  if(nilaiakhir>=81){cout<<"Nilaii INDEKS :A";}
+    else if(nilaiakhir>=60){cout<<"Nilaii INDEKS :B";}
+    else if(nilaiakhir>=40){cout<<"Nilaii INDEKS :C";}
+    else if(nilaiakhir>=20){cout<<"Nilaii INDEKS :D";}
+    else if(nilaiakhir>=0){cout<<"Nilaii INDEKS :E";}
+cout<<endl;
+}
+main ()
+
+{
+    struct value
+
+    {
+     int uts,uas,tugas,absen;
+    double nilaiuts,nilaiuas,nilaitugas,nilaiabsen;
+
+    };
+
+    value skor;
+    cout<<"        MASUKAN NILAI       ";cout<<endl;cout<<endl;
+    cout<<"****************************";cout<<endl;cout<<endl;
+    skor.uts=input  ("UTS    ");
+    skor.uas=input  ("UAS    ");
+    skor.tugas=input("TUGAS  ");
+    skor.absen=input("Absen  ");
+    cout<<endl;
+    skor.nilaiuts=(skor.uts*0.2);
+    skor.nilaiuas=(skor.uas*0.3);
+    skor.nilaitugas=(skor.tugas*0.35);
+    skor.nilaiabsen=(skor.absen*0.15);
+    nilaiakhir=(skor.nilaiuts+skor.nilaiuas+skor.nilaitugas+skor.nilaiabsen);
+    cout<<"****************************";cout<<endl;
+    cout<<"Nilai Akhir   :"<<nilaiakhir;cout<<endl;
+
+    grade(nilaiakhir);
+
+
+
+}
